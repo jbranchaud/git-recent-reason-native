@@ -41,6 +41,9 @@ let make = (color: foreground_color, str: string) => {
   String.concat("", concat_list);
 };
 
+/* Identity */
+let none = (str: string) => str;
+
 /* Colors */
 let black = (str: string) => make(BLACK, str); /* black: [30, 39] */
 let red = (str: string) => make(RED, str); /* red: [31, 39] */

@@ -1,17 +1,20 @@
 let apply_color_by_index = (index, str) =>
-  switch (index) {
-  | 0
-  | 1 => Color.red(str)
-  | 2
-  | 3 => Color.green(str)
-  | 4
-  | 5 => Color.yellow(str)
-  | 6
-  | 7 => Color.blue(str)
-  | 8
-  | 9 => Color.magenta(str)
-  | _ => str
-  };
+  (
+    switch (index) {
+    | 0
+    | 1 => Color.red
+    | 2
+    | 3 => Color.green
+    | 4
+    | 5 => Color.yellow
+    | 6
+    | 7 => Color.blue
+    | 8
+    | 9 => Color.magenta
+    | _ => Color.none
+    }
+  ) @@
+  str;
 
 /* source: https://stackoverflow.com/a/5972362/535590 */
 let command = "git for-each-ref --count=10 --sort=-committerdate refs/heads/ --format='%(refname:short)'";
